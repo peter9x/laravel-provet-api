@@ -2,19 +2,19 @@
 
 namespace Mupy\ProvetApi\HealthChecks;
 
-use Mupy\ProvetApi\ProvetCentralClient;
+use Mupy\ProvetApi\ProvetClient;
 use Spatie\Health\Checks\Check;
 use Spatie\Health\Checks\Result;
 use Throwable;
 
-class ProvetCentralCheck extends Check
+class ProvetApiCheck extends Check
 {
     /** @var array<int, string>|null */
     protected ?array $connections = null;
 
     /**
      * Limit the check to specific connection names instead of every connection
-     * configured in `config('businesscentral.connections')`.
+     * configured in `config('provet.connections')`.
      *
      * @param  array<int, string>  $connections
      */
@@ -32,10 +32,10 @@ class ProvetCentralCheck extends Check
         $connections = $this->connections ?? array_keys(config('provet.connections', []));
 
         if (empty($connections)) {
-            return $result->failed('No Business Central connections are configured.');
+            return $result->failed('No Provet connections are configured.');
         }
 
-        $client = app(ProvetCentralClient::class);
+        $client = app(ProvetClient::class);
         $errors = [];
 
         foreach ($connections as $connection) {
@@ -48,7 +48,7 @@ class ProvetCentralCheck extends Check
 
         if (empty($errors)) {
             return $result->ok(sprintf(
-                'Successfully authenticated with Business Central (%s).',
+                'Successfully authenticated with Provet (%s).',
                 implode(', ', $connections)
             ));
         }
@@ -57,6 +57,6 @@ class ProvetCentralCheck extends Check
             ->map(fn (string $message, string $connection) => "{$connection}: {$message}")
             ->implode(' | ');
 
-        return $result->failed("Business Central authentication failed - {$summary}");
+        return $result->failed("Provet authentication failed - {$summary}");
     }
 }
