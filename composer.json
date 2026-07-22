@@ -16,6 +16,8 @@
     "require": {
         "php": "^8.2",
         "illuminate/support": "^10.0|^11.0|^12.0|^13.0",
+        "illuminate/http": "^10.0|^11.0|^12.0|^13.0",
+        "illuminate/cache": "^10.0|^11.0|^12.0|^13.0",
         "league/oauth2-client": "^2",
         "guzzlehttp/guzzle": "7.x",
         "ext-json": "*",

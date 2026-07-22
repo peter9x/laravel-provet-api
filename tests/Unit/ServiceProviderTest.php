@@ -2,8 +2,8 @@
 
 namespace Tests\Unit;
 
-use Mupy\ProvetApi\ProvetServiceProvider;
 use Mupy\ProvetApi\Facades\Provet;
+use Mupy\ProvetApi\ProvetServiceProvider;
 use Orchestra\Testbench\TestCase;
 
 class ServiceProviderTest extends TestCase

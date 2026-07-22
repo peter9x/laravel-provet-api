@@ -40,7 +40,7 @@ class ProvetApiCheck extends Check
 
         foreach ($connections as $connection) {
             try {
-                
+
             } catch (Throwable $exception) {
                 $errors[$connection] = $exception->getMessage();
             }

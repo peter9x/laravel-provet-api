@@ -22,8 +22,8 @@ class ProvetServiceProvider extends ServiceProvider
 
         $this->app->singleton(ProvetClient::class, function ($app) {
             /** @var array{
-             *     connections: array<string, array{client_id: string, secret: string}>,
-             *     api_url: string
+             *     default?: string,
+             *     connections: array<string, array<string, mixed>>
              * } $config */
             $config = config('provet');
 
