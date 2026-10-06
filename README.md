@@ -1,7 +1,7 @@
 <p align="center">
     <a href="https://github.com/peter9x/laravel-provet-api/actions"><img src="https://github.com/peter9x/laravel-provet-api/actions/workflows/php.yml/badge.svg" alt="Build Status"></a>
-    <a href="https://packagist.org/packages/peter9x/laravel-provet-api"><img src="https://img.shields.io/packagist/v/peter9x/laravel-provet-api" alt="Latest Stable Version"></a>
-    <a href="https://packagist.org/packages/peter9x/laravel-provet-api"><img src="https://img.shields.io/packagist/l/peter9x/laravel-provet-api" alt="License"></a>
+    <a href="https://packagist.org/packages/peter9x/laravel-provet-api"><img src="https://img.shields.io/packagist/v/peter9x/laravel-provet-api?style=for-the-badge" alt="Latest Stable Version"></a>
+    <a href="https://packagist.org/packages/peter9x/laravel-provet-api"><img src="https://img.shields.io/packagist/l/peter9x/laravel-provet-api?style=for-the-badge" alt="License"></a>
 </p>
 
 # Laravel Provet API
